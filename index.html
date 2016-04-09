@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GiniRate</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <h2>GiniRate - drinks imagined by machines</h2>
+    <button id="newDrink">New drink</button>
+    <p>New drink: <strong id="drinkName"></strong></p>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      //SOCKETS
+      var socket = io();
+
+      //Update UI on new drink
+      socket.on('NEW_DRINK', function(value) {
+        console.log("New drink: " + value.toString());
+        $("#drinkName").html(value.toString());
+      });
+
+      $('#newDrink').click(function() {
+        console.log("Getting a new drink:");
+        socket.emit('GET_NEW_DRINK');
+      });
+    </script>
+  </body>
+</html>

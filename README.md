@@ -5,3 +5,9 @@ Inspired by a tweet
 Faris Alsuhail @AlsuhailFaris
 @klementiini Eiköhän viikon sisään ilmaannu internetseihin Paperi T -runogeneraattori #digitalisaatio
 4:17pm · 30 Sep 2016 · Twitter Web Client
+
+
+Installation
+===
+Install
+https://keras.io/
